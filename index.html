@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>soft thoughts ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>soft thoughts ♡</h1>
+<p>a tiny space for your feelings</p>
+</header>
+
+<div class="modes">
+<button onclick="showPage('main')">🏠</button>
+<button onclick="showPage('info')">📖</button>
+<button onclick="showPage('private')">🔒</button>
+
+<button onclick="setMode('default')">🌸</button>
+<button onclick="setMode('dark')">🌙</button>
+<button onclick="setMode('white')">🤍</button>
+
+<button id="musicBtn" onclick="toggleMusic()">🎧</button>
+<button onclick="prevSong()">⏮</button>
+<button onclick="nextSong()">⏭</button>
+<button onclick="randomSong()">🔀</button>
+</div>
+
+<!-- MAIN -->
+<div class="container" id="mainPage">
+
+<div class="card">
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png"> daily quote</h2>
+<p id="quote"></p>
+</div>
+
+<div class="card">
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/833/833472.png"> reminder</h2>
+<button onclick="showMessage()">click me ♡</button>
+<p id="message"></p>
+</div>
+
+<div class="card">
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"> mirror</h2>
+<textarea id="reflectionInput" placeholder="what do you see in yourself?"></textarea>
+<button onclick="reflect()">reflect</button>
+<p id="reflectionOutput"></p>
+</div>
+
+<div class="card">
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"> write it out</h2>
+<textarea id="journalInput" placeholder="your thoughts..."></textarea>
+</div>
+
+</div>
+
+<!-- INFO -->
+<div class="container" id="infoPage" style="display:none;">
+<div class="card"><h2>what are insecurities?</h2><p>self-doubt and feeling not enough.</p></div>
+<div class="card"><h2>spotlight effect</h2><p>feels like everyone is watching you.</p></div>
+<div class="card"><h2>factors</h2><p>family, peers, social media.</p></div>
+<div class="card"><h2>overcome</h2><p>be kind to yourself, stop comparing.</p></div>
+</div>
+
+<!-- PRIVATE -->
+<div class="container" id="privatePage" style="display:none;">
+
+<div id="lockScreen" class="card">
+<h2>🔒 private diary</h2>
+<input type="password" id="passwordInput" placeholder="password">
+<button onclick="unlockDiary()">enter</button>
+<p id="errorMsg"></p>
+</div>
+
+<div id="diaryContent" style="display:none;">
+<div class="card">
+<h2>your space</h2>
+<textarea id="privateDiary"></textarea>
+</div>
+</div>
+
+</div>
+
+<footer>made with ♡</footer>
+
+<audio id="bgMusic" loop></audio>
+
+<script src="script.js"></script>
+</body>
+  </html>
